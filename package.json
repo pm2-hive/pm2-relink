@@ -1,0 +1,26 @@
+{
+  "name": "pm2-relink",
+  "version": "1.0.0",
+  "description": "Relink PM2 with current hostname at PM2 init",
+  "main": "app.js",
+  "dependencies": {
+    "pmx" : "beta",
+    "pm2" : "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keymetrics/pmx.git"
+  },
+  "config" : {
+    "conf_var_1" : true,
+    "conf_var_2" : "myvalue"
+  },
+  "apps" : [{
+    "merge_logs"         : true,
+    "max_memory_restart" : "200M",
+    "script"             : "app.js",
+    "autorestart" : false
+  }],
+  "author": "Keymetrics Inc.",
+  "license": "MIT"
+}
